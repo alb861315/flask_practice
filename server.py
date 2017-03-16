@@ -19,8 +19,8 @@ def say_hello():
 @app.route('/lucky')
 def lucky_number():
     lucky_num = randint(1, 10)
-    lucky_message = "Your lucky number is %s" % lucky_num
-    return "<html><body><h1>" + lucky_message + "</h1></body></html>"
+    return render_template('lucky.html', number=lucky_num)
+
 
 @app.route('/form')
 def show_form():
